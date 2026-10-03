@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Fiche de cours : les étapes pour lancer une boutique Shopify en dropshipping, les applis selon chaque situation, DSers expliqué et les pièges à éviter.">
+<meta name="description" content="Fiche de cours : lancer une boutique Shopify en dropshipping, les applis selon chaque situation, la boutique hybride, Shopify + Claude et un lexique e-commerce et marketing.">
 <title>Méthode boutique Shopify</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,7 +104,7 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
   <header class="tete">
     <span class="sur">Fiche de cours · tirée d'une vraie boutique lancée en septembre 2026</span>
     <h1>Lancer une boutique Shopify en dropshipping</h1>
-    <p class="chapo">Les étapes importantes, dans le bon ordre, les applis à utiliser selon chaque situation et les pièges à éviter. Les exemples viennent d'AironiMenager, une boutique d'aspirateurs. Coche au fur et à mesure : tes cases restent enregistrées dans ton navigateur.</p>
+    <p class="chapo">Les étapes importantes dans le bon ordre, les applis selon chaque situation, la boutique hybride, l'association Shopify + Claude, un lexique e-commerce et marketing, et les pièges à éviter. Les exemples viennent d'AironiMenager, une boutique d'aspirateurs. Coche au fur et à mesure : tes cases restent enregistrées dans ton navigateur.</p>
     <div class="progres">
       <div class="barre" aria-hidden="true"><span id="jauge"></span></div>
       <span id="compte">0 étape cochée</span>
@@ -116,6 +116,7 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
     <ol>
       <li><a href="#principe"><span class="n">?</span>Le dropshipping et DSers</a></li>
       <li><a href="#applis"><span class="n">+</span>Les applis par situation</a></li>
+      <li><a href="#hybride"><span class="n">≈</span>La boutique hybride</a></li>
       <li><a href="#regles"><span class="n">★</span>Les règles d'or</a></li>
       <li><a href="#e1"><span class="n">1</span>Statut et marché</a></li>
       <li><a href="#e2"><span class="n">2</span>Marque</a></li>
@@ -131,6 +132,7 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
       <li><a href="#e12"><span class="n">12</span>Lancement</a></li>
       <li><a href="#e13"><span class="n">13</span>Après le lancement</a></li>
       <li><a href="#pieges"><span class="n">!</span>Pièges techniques</a></li>
+      <li><a href="#claude"><span class="n">AI</span>Shopify + Claude</a></li>
       <li><a href="#lexique"><span class="n">Aa</span>Lexique</a></li>
     </ol>
   </nav>
@@ -183,6 +185,21 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
         </table>
       </div>
       <div class="note regle"><b>Avant d'installer une appli</b><p>Lire ce qu'elle demande comme accès, vérifier son prix après l'essai gratuit, et la désinstaller si elle ne sert plus.</p></div>
+    </section>
+
+    <section id="hybride">
+      <div class="entete"><span class="num">Modèle</span><h2>La boutique hybride</h2><p class="but">Une boutique hybride mélange plusieurs façons de vendre au lieu de tout miser sur une seule. Le mot recouvre trois cas.</p></div>
+      <div class="regles">
+        <div><strong>Stock + dropshipping</strong><p>Les produits qui se vendent bien sont achetés en petite quantité et stockés (livraison rapide, contrôle qualité, emballage à ta marque). Le reste reste en dropshipping pour tester sans risque.</p></div>
+        <div><strong>Fournisseurs Europe + Asie</strong><p>Les appareils viennent d'entrepôts européens (5 à 10 jours), les accessoires d'Asie (10 à 20 jours). Chaque fiche affiche son vrai délai.</p></div>
+        <div><strong>En ligne + physique</strong><p>La même boutique Shopify vend sur le site et en vrai (marché, salon, magasin) avec Shopify POS : un seul stock, un seul fichier clients.</p></div>
+      </div>
+      <ul class="cases">
+        <li><input type="checkbox" id="ch-1"><label for="ch-1"><strong>Commencer en dropshipping pour tester</strong><small>Aucun stock à financer tant qu'on ne sait pas ce qui se vend.</small></label></li>
+        <li><input type="checkbox" id="ch-2"><label for="ch-2"><strong>Stocker un produit dès qu'il se vend régulièrement</strong><small>Livraison plus rapide, moins de retours, meilleure marge à l'unité.</small></label></li>
+        <li><input type="checkbox" id="ch-3"><label for="ch-3"><strong>Déclarer chaque lieu de stock dans Shopify</strong><small>Paramètres → Emplacements : ton stock d'un côté, les fournisseurs de l'autre, pour que les délais et les ruptures restent justes.</small></label></li>
+        <li><input type="checkbox" id="ch-4"><label for="ch-4"><strong>Prévenir le client si sa commande part de deux endroits</strong><small>« Votre commande peut arriver en plusieurs colis, sans frais supplémentaires. »</small></label></li>
+      </ul>
     </section>
 
     <section id="regles">
@@ -368,21 +385,105 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
       <div class="note piege"><b>Photos partagées</b><p>Une même image peut servir à plusieurs produits : la retirer d'un produit ne la retire pas des autres. Sauvegarder avant de supprimer.</p></div>
     </section>
 
+    <section id="claude">
+      <div class="entete"><span class="num">Outils</span><h2>Shopify + Claude : comment ça s'assemble</h2><p class="but">AironiMenager a été construite avec Claude Code. Voici comment les pièces se branchent, et les règles de sécurité à garder.</p></div>
+      <ol class="flux">
+        <li><strong>Tu demandes en français</strong>« Ajoute un bloc “Pourquoi celui-ci ?” sur les fiches et vérifie sur mobile. »</li>
+        <li><strong>Le thème (Liquid, HTML, CSS, JS)</strong>Claude modifie les fichiers sur ton ordinateur, puis les envoie avec la Shopify CLI.</li>
+        <li><strong>L'API Admin (GraphQL)</strong>Pour les produits, prix, photos, métachamps et pages légales, avec des droits limités que tu autorises une fois.</li>
+        <li><strong>Le navigateur</strong>Pour ce que l'API ne fait pas : réglages de paiement, éditeur de la page de paiement, appli fournisseur.</li>
+        <li><strong>Les connecteurs MCP</strong>Pour brancher d'autres services : documents, design, e-mailing… Shopify propose aussi un serveur MCP pour les développeurs (documentation et API).</li>
+      </ol>
+      <div class="tab">
+        <table>
+          <thead><tr><th>Ce que tu veux faire</th><th>Par où passe Claude</th><th>Exemple réel</th></tr></thead>
+          <tbody>
+            <tr><td>Changer le design</td><td>Fichiers du thème + Shopify CLI</td><td>Panier avec étapes, récapitulatif et suggestions</td></tr>
+            <tr><td>Corriger 16 fiches d'un coup</td><td>API Admin (GraphQL)</td><td>Chiffres non prouvés remplacés par « Non communiquée »</td></tr>
+            <tr><td>Régler la page de paiement</td><td>Navigateur (admin Shopify)</td><td>Logo, couleurs, blocs de la page « Merci »</td></tr>
+            <tr><td>Vérifier ce que voit le client</td><td>Navigateur</td><td>Contrôle sur ordinateur et en largeur téléphone</td></tr>
+            <tr><td>Mettre une page en ligne</td><td>Git, GitHub, Vercel</td><td>Cette fiche de cours</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note piege"><b>Sécurité</b><p>Ne jamais donner un mot de passe, une carte bancaire ou une clé API dans la conversation. Claude ne se connecte pas à ta place, ne paie rien et ne supprime rien sans ton accord explicite. Donner à chaque outil le minimum de droits.</p></div>
+      <div class="note regle"><b>Bonnes pratiques</b><p>Travailler sur une copie du thème avant de publier, sauvegarder avant une modification en masse, relire ce qui part en ligne, garder un journal des changements. Une demande précise (« vérifie que mes fiches disent la même chose que mes CGV ») donne un meilleur résultat qu'une demande vague.</p></div>
+    </section>
+
     <section id="lexique">
-      <div class="entete"><span class="num">À garder sous la main</span><h2>Lexique</h2></div>
+      <div class="entete"><span class="num">À garder sous la main</span><h2>Lexique</h2><p class="but">Les mots qu'on entend partout en e-commerce, en marketing et côté technique, expliqués simplement.</p></div>
+      <h3>E-commerce</h3>
       <dl class="lex">
         <dt>Dropshipping</dt><dd>Vente sans stock : le fournisseur expédie directement au client.</dd>
-        <dt>Fournisseur</dt><dd>Celui qui fabrique ou stocke le produit et l'expédie (vendeur AliExpress, grossiste européen…).</dd>
+        <dt>Boutique hybride</dt><dd>Boutique qui mélange plusieurs façons de vendre : stock à soi et dropshipping, ou en ligne et en magasin (voir la partie dédiée).</dd>
+        <dt>Fournisseur</dt><dd>Celui qui fabrique ou stocke le produit et l'expédie : vendeur AliExpress, grossiste européen…</dd>
+        <dt>Niche</dt><dd>Le petit marché précis que vise la boutique (ex. aspirateurs et entretien de la maison).</dd>
+        <dt>D2C / DTC</dt><dd>« Direct to consumer » : une marque qui vend directement au client, sans magasin intermédiaire.</dd>
+        <dt>B2C / B2B</dt><dd>Vente aux particuliers (B2C) ou aux entreprises (B2B).</dd>
+        <dt>Marketplace</dt><dd>Site qui vend les produits de nombreux vendeurs : Amazon, Cdiscount, AliExpress.</dd>
+        <dt>Print on demand</dt><dd>Produit imprimé seulement après la commande (t-shirt, mug), sans stock.</dd>
+        <dt>Variante / SKU</dt><dd>Une version d'un produit (couleur, taille, lot) et son code unique.</dd>
         <dt>Mapping</dt><dd>Lien entre une variante de ta boutique et la variante du fournisseur.</dd>
-        <dt>Variante</dt><dd>Une version d'un produit : couleur, taille, lot de 6 ou de 12…</dd>
-        <dt>SKU</dt><dd>Code unique d'une variante, utilisé pour s'y retrouver entre boutique et fournisseur.</dd>
-        <dt>Prix barré</dt><dd>Ancien prix affiché à côté du prix actuel. Légal seulement s'il a vraiment été pratiqué (plus bas prix des 30 derniers jours).</dd>
-        <dt>Thème</dt><dd>L'apparence de la boutique. Dawn est le thème gratuit de Shopify, une bonne base.</dd>
-        <dt>Métachamp</dt><dd>Champ personnalisé ajouté à un produit (ex. autonomie, aspiration) pour l'afficher sur la fiche.</dd>
-        <dt>CGV</dt><dd>Conditions générales de vente : le contrat entre toi et le client. Tout le site doit dire la même chose.</dd>
-        <dt>Merchant Center</dt><dd>L'outil de Google où arrivent tes produits pour Google Shopping. Il vérifie que rien n'est trompeur.</dd>
-        <dt>Taux de conversion</dt><dd>Part des visiteurs qui achètent. 1 à 3 % est un ordre de grandeur courant en e-commerce.</dd>
+        <dt>CA</dt><dd>Chiffre d'affaires : total des ventes encaissées, avant de retirer les coûts.</dd>
+        <dt>Marge</dt><dd>Ce qu'il reste après avoir payé le produit, la livraison, les frais de paiement et la pub.</dd>
+        <dt>Panier moyen (AOV)</dt><dd>Montant moyen d'une commande : CA ÷ nombre de commandes.</dd>
+        <dt>Taux de conversion (CR)</dt><dd>Part des visites qui finissent en commande : commandes ÷ visites × 100. 1 à 3 % est un ordre de grandeur courant.</dd>
         <dt>Panier abandonné</dt><dd>Client qui a rempli son panier sans payer. Un e-mail de relance en récupère une partie.</dd>
+        <dt>Upsell / cross-sell</dt><dd>Proposer une version supérieure (upsell) ou un produit complémentaire (cross-sell), comme les filtres avec le robot.</dd>
+        <dt>Valeur vie client (LTV)</dt><dd>Ce qu'un client rapporte sur toutes ses commandes, pas seulement la première.</dd>
+        <dt>Fulfillment</dt><dd>Tout ce qui se passe après l'achat : préparation, emballage, expédition.</dd>
+        <dt>Prix barré</dt><dd>Ancien prix affiché à côté du prix actuel. Légal seulement s'il a vraiment été pratiqué (plus bas prix des 30 derniers jours).</dd>
+        <dt>CGV</dt><dd>Conditions générales de vente : le contrat entre toi et le client. Tout le site doit dire la même chose.</dd>
+        <dt>Rétractation</dt><dd>Les 14 jours pendant lesquels un client en ligne peut changer d'avis sans se justifier.</dd>
+      </dl>
+      <h3>Marketing et publicité</h3>
+      <dl class="lex">
+        <dt>SEO</dt><dd>Référencement naturel : apparaître gratuitement dans Google grâce au contenu, aux titres, à la vitesse du site et aux liens qui pointent vers lui. Lent mais durable.</dd>
+        <dt>SEA</dt><dd>Référencement payant : les annonces Google Ads au-dessus des résultats. Rapide, mais s'arrête quand on arrête de payer.</dd>
+        <dt>SEM</dt><dd>Le tout : SEO + SEA.</dd>
+        <dt>Social ads</dt><dd>Publicités sur les réseaux sociaux (Facebook, Instagram, TikTok).</dd>
+        <dt>Mot-clé</dt><dd>Ce que les gens tapent dans Google (« aspirateur balai sans fil puissant »).</dd>
+        <dt>Balise title / meta description</dt><dd>Le titre et le petit texte qui s'affichent dans les résultats Google. Ils donnent envie de cliquer.</dd>
+        <dt>Backlink</dt><dd>Un lien d'un autre site vers le tien. Google y voit un signe de confiance.</dd>
+        <dt>Données structurées</dt><dd>Informations cachées dans la page (prix, avis, contact) que Google lit pour enrichir ses résultats.</dd>
+        <dt>Merchant Center</dt><dd>L'outil de Google où arrivent tes produits pour Google Shopping. Il vérifie que rien n'est trompeur.</dd>
+        <dt>KPI</dt><dd>Indicateur clé qu'on suit pour savoir si ça marche : CR, panier moyen, ROAS…</dd>
+        <dt>CTR</dt><dd>Taux de clic : clics ÷ affichages × 100.</dd>
+        <dt>CPC / CPM</dt><dd>Coût par clic / coût pour mille affichages d'une publicité.</dd>
+        <dt>ROAS</dt><dd>Retour sur dépense publicitaire : CA généré ÷ budget pub. Un ROAS de 3 = 3 € de ventes pour 1 € de pub.</dd>
+        <dt>ROI</dt><dd>Retour sur investissement : ce que tu gagnes vraiment, une fois tous les coûts retirés.</dd>
+        <dt>CAC</dt><dd>Coût d'acquisition client : ce que coûte en pub l'arrivée d'un nouveau client.</dd>
+        <dt>Tunnel de vente</dt><dd>Le chemin du client : il découvre, s'intéresse, ajoute au panier, paie. On cherche où il décroche.</dd>
+        <dt>Landing page</dt><dd>Page d'arrivée pensée pour une seule action, souvent liée à une publicité.</dd>
+        <dt>CTA</dt><dd>Appel à l'action : le bouton ou la phrase qui dit quoi faire (« Ajouter au panier »).</dd>
+        <dt>Pixel</dt><dd>Petit code de suivi (Meta, Google, TikTok) qui mesure ce que font les visiteurs venus d'une pub.</dd>
+        <dt>Retargeting</dt><dd>Montrer une pub aux personnes déjà venues sur le site sans acheter.</dd>
+        <dt>A/B test</dt><dd>Comparer deux versions (titre, photo, prix) sur deux groupes de visiteurs pour garder la meilleure.</dd>
+        <dt>Taux de rebond</dt><dd>Part des visiteurs qui repartent après une seule page.</dd>
+        <dt>UGC</dt><dd>Contenu créé par des clients (photos, vidéos). À utiliser seulement avec leur accord écrit.</dd>
+        <dt>Preuve sociale</dt><dd>Ce qui rassure par les autres : avis, notes, photos de clients.</dd>
+        <dt>Persona</dt><dd>Portrait type du client visé : âge, besoins, budget, freins.</dd>
+        <dt>Opt-in</dt><dd>Accord explicite du client pour recevoir des e-mails marketing (obligatoire avec le RGPD).</dd>
+      </dl>
+      <h3>Technique : Shopify, web et IA</h3>
+      <dl class="lex">
+        <dt>HTML / CSS / JavaScript</dt><dd>Le trio du web : la structure de la page, son apparence, ses comportements (un bouton qui ajoute au panier).</dd>
+        <dt>Liquid</dt><dd>Le langage de modèles de Shopify : du HTML avec des trous que Shopify remplit (nom du produit, prix…).</dd>
+        <dt>Thème, section, bloc</dt><dd>Le thème est l'apparence complète ; une section est une bande de page ; un bloc est un élément dans une section.</dd>
+        <dt>Dawn</dt><dd>Le thème gratuit de Shopify, une bonne base à personnaliser.</dd>
+        <dt>Métachamp</dt><dd>Champ personnalisé ajouté à un produit (ex. autonomie) pour l'afficher sur la fiche.</dd>
+        <dt>API</dt><dd>Porte d'entrée qui permet à un programme de lire ou modifier la boutique (produits, prix, commandes) sans passer par l'écran.</dd>
+        <dt>GraphQL</dt><dd>Le format des requêtes de l'API Admin de Shopify : on demande exactement les champs voulus.</dd>
+        <dt>CLI</dt><dd>Outil qui s'utilise en tapant des commandes. La Shopify CLI envoie un thème ou interroge l'API.</dd>
+        <dt>Scopes (droits)</dt><dd>Ce qu'une appli ou un outil a le droit de faire : lire les produits, les modifier, lire les commandes…</dd>
+        <dt>Token / clé API</dt><dd>Le mot de passe d'un programme. Ne jamais le coller dans une conversation ni le publier.</dd>
+        <dt>Webhook</dt><dd>Message envoyé automatiquement par Shopify quand quelque chose arrive (nouvelle commande).</dd>
+        <dt>MCP</dt><dd>Model Context Protocol : standard ouvert qui branche une IA comme Claude sur des outils et services (des « connecteurs »).</dd>
+        <dt>Claude Code</dt><dd>Claude qui travaille sur ton ordinateur : il lit et modifie des fichiers, lance des commandes et peut piloter un navigateur.</dd>
+        <dt>Git / GitHub</dt><dd>Git garde l'historique des versions d'un projet ; GitHub l'héberge en ligne.</dd>
+        <dt>Vercel</dt><dd>Hébergeur qui met un site en ligne à partir d'un dépôt GitHub, et le met à jour à chaque modification.</dd>
+        <dt>Domaine / DNS</dt><dd>Le nom du site (maboutique.com) et le réglage qui le relie au bon serveur.</dd>
+        <dt>CDN</dt><dd>Réseau de serveurs qui livre images et fichiers depuis l'endroit le plus proche du visiteur.</dd>
       </dl>
     </section>
   </main>
