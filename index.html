@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Fiche de cours : les étapes pour lancer une boutique Shopify en dropshipping, les applis selon chaque situation, DSers expliqué et les pièges à éviter.">
+<title>Méthode boutique Shopify</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --fond:#F5F7FA; --carte:#FFFFFF; --encre:#141A26; --doux:#556070; --trait:#DDE2EA;
+  --accent:#2C58C9; --accent-fond:#E8EEFB; --ok:#1C7F50; --ok-fond:#E3F3EA;
+  --alerte:#A4510C; --alerte-fond:#FBEEDF; --code:#EEF1F6;
+  --titre:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --texte:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --fond:#0F131B; --carte:#171C27; --encre:#E7EBF2; --doux:#9AA5B6; --trait:#2A3242;
+    --accent:#86A6F5; --accent-fond:#1D2740; --ok:#6FCF9B; --ok-fond:#16271F;
+    --alerte:#F0A764; --alerte-fond:#2B2015; --code:#212837; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --fond:#0F131B; --carte:#171C27; --encre:#E7EBF2; --doux:#9AA5B6; --trait:#2A3242;
+  --accent:#86A6F5; --accent-fond:#1D2740; --ok:#6FCF9B; --ok-fond:#16271F;
+  --alerte:#F0A764; --alerte-fond:#2B2015; --code:#212837; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--fond);color:var(--encre);font:16px/1.6 var(--texte);margin:0;padding-inline:16px}
+a{color:var(--accent)}
+code{font-family:var(--mono);font-size:.86em;background:var(--code);padding:.1em .35em;border-radius:4px}
+.page{max-width:1120px;margin:0 auto;padding-block:40px 80px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:48px}
+@media (max-width:860px){.page{grid-template-columns:1fr;gap:24px;padding-block:24px 56px}}
+header.tete{grid-column:1/-1;display:grid;gap:12px;border-bottom:1px solid var(--trait);padding-bottom:28px}
+.sur{font:600 12px/1 var(--titre);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font:600 clamp(32px,5vw,48px)/1.08 var(--titre);margin:0;text-wrap:balance}
+.chapo{max-width:66ch;color:var(--doux);margin:0;font-size:17px}
+.progres{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--doux)}
+.barre{width:220px;max-width:100%;height:8px;border-radius:99px;background:var(--trait);overflow:hidden}
+.barre span{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
+button.lien{background:none;border:0;color:var(--accent);font:inherit;font-size:14px;cursor:pointer;padding:0;text-decoration:underline}
+nav.som{position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px);align-self:start;font-size:14px}
+nav.som ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+nav.som a{display:flex;gap:10px;padding:6px 8px;border-radius:6px;color:var(--encre);text-decoration:none}
+nav.som a:hover,nav.som a:focus-visible{background:var(--accent-fond);outline:none}
+nav.som .n{font-family:var(--mono);color:var(--doux);min-width:1.6em}
+@media (max-width:860px){nav.som{position:static}nav.som ol{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
+main{display:grid;gap:56px;min-width:0}
+section{display:grid;gap:18px;scroll-margin-top:24px}
+.entete{display:grid;gap:6px}
+.entete .num{font:500 13px/1 var(--mono);color:var(--accent)}
+h2{font:600 28px/1.15 var(--titre);margin:0;text-wrap:balance}
+.but{margin:0;color:var(--doux);max-width:66ch}
+h3{font:600 17px/1.3 var(--texte);margin:8px 0 0}
+ul.cases{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+ul.cases li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;background:var(--carte);border:1px solid var(--trait);border-radius:8px;padding:11px 14px}
+ul.cases input{width:18px;height:18px;margin:3px 0 0;accent-color:var(--ok);cursor:pointer}
+ul.cases label{cursor:pointer}
+ul.cases li.fait label{color:var(--doux)}
+ul.cases li.fait label strong{text-decoration:line-through;text-decoration-color:var(--doux)}
+ul.cases small{display:block;color:var(--doux);font-size:14px;margin-top:2px}
+.note{border-radius:8px;padding:14px 16px;font-size:15px;display:grid;gap:4px}
+.note b{font:600 12px/1.2 var(--titre);letter-spacing:.1em;text-transform:uppercase}
+.piege{background:var(--alerte-fond);color:var(--encre)} .piege b{color:var(--alerte)}
+.regle{background:var(--ok-fond)} .regle b{color:var(--ok)}
+.note p{margin:0}
+.regles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.regles div{background:var(--carte);border:1px solid var(--trait);border-radius:8px;padding:14px 16px;display:grid;gap:4px}
+.regles strong{font:600 16px/1.3 var(--titre)}
+.regles p{margin:0;font-size:14px;color:var(--doux)}
+.tab{overflow-x:auto;border:1px solid var(--trait);border-radius:8px;background:var(--carte)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--trait);vertical-align:top}
+th{font:600 12px/1.2 var(--titre);letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:500;white-space:nowrap}
+.fiche{background:var(--carte);border:1px solid var(--trait);border-radius:10px;padding:22px 24px;display:grid;gap:14px}
+.fiche p{margin:0;max-width:68ch}
+.flux{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;counter-reset:f}
+.flux li{counter-increment:f;background:var(--accent-fond);border-radius:8px;padding:12px 14px;font-size:14px;display:grid;gap:4px}
+.flux li::before{content:counter(f);font:600 13px/1 var(--mono);color:var(--accent)}
+.flux strong{font-size:15px}
+.marge{font-family:var(--mono);font-size:14px;background:var(--code);border-radius:8px;padding:12px 14px;line-height:1.7}
+dl.lex{margin:0;display:grid;grid-template-columns:minmax(140px,190px) 1fr;border:1px solid var(--trait);border-radius:8px;background:var(--carte);overflow:hidden}
+dl.lex dt,dl.lex dd{margin:0;padding:10px 14px;border-bottom:1px solid var(--trait)}
+dl.lex dt{font-weight:600}
+dl.lex dd{color:var(--doux);font-size:15px}
+dl.lex dt:nth-last-of-type(1),dl.lex dd:last-child{border-bottom:0}
+@media (max-width:560px){dl.lex{grid-template-columns:1fr} dl.lex dt{border-bottom:0;padding-bottom:0}}
+td .pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--ok-fond);color:var(--ok);white-space:nowrap}
+footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;color:var(--doux);font-size:14px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="page">
+  <header class="tete">
+    <span class="sur">Fiche de cours · tirée d'une vraie boutique lancée en septembre 2026</span>
+    <h1>Lancer une boutique Shopify en dropshipping</h1>
+    <p class="chapo">Les étapes importantes, dans le bon ordre, les applis à utiliser selon chaque situation et les pièges à éviter. Les exemples viennent d'AironiMenager, une boutique d'aspirateurs. Coche au fur et à mesure : tes cases restent enregistrées dans ton navigateur.</p>
+    <div class="progres">
+      <div class="barre" aria-hidden="true"><span id="jauge"></span></div>
+      <span id="compte">0 étape cochée</span>
+      <button class="lien" id="raz" type="button">Tout décocher</button>
+    </div>
+  </header>
+
+  <nav class="som" aria-label="Sommaire">
+    <ol>
+      <li><a href="#principe"><span class="n">?</span>Le dropshipping et DSers</a></li>
+      <li><a href="#applis"><span class="n">+</span>Les applis par situation</a></li>
+      <li><a href="#regles"><span class="n">★</span>Les règles d'or</a></li>
+      <li><a href="#e1"><span class="n">1</span>Statut et marché</a></li>
+      <li><a href="#e2"><span class="n">2</span>Marque</a></li>
+      <li><a href="#e3"><span class="n">3</span>Choix des produits</a></li>
+      <li><a href="#e4"><span class="n">4</span>Fiches produits</a></li>
+      <li><a href="#e5"><span class="n">5</span>Appli fournisseur et prix</a></li>
+      <li><a href="#e6"><span class="n">6</span>Thème et vitrine</a></li>
+      <li><a href="#e7"><span class="n">7</span>Fiche produit</a></li>
+      <li><a href="#e8"><span class="n">8</span>Livraison et légal</a></li>
+      <li><a href="#e9"><span class="n">9</span>Panier et paiement</a></li>
+      <li><a href="#e10"><span class="n">10</span>E-mails</a></li>
+      <li><a href="#e11"><span class="n">11</span>Contrôle Google Ads</a></li>
+      <li><a href="#e12"><span class="n">12</span>Lancement</a></li>
+      <li><a href="#e13"><span class="n">13</span>Après le lancement</a></li>
+      <li><a href="#pieges"><span class="n">!</span>Pièges techniques</a></li>
+      <li><a href="#lexique"><span class="n">Aa</span>Lexique</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="principe">
+      <div class="entete"><span class="num">Pour bien démarrer</span><h2>Le dropshipping, et c'est quoi DSers ?</h2><p class="but">Le dropshipping, c'est vendre un produit sans l'avoir en stock : le fournisseur l'expédie directement à ton client. Une appli fait le lien entre ta boutique et le fournisseur.</p></div>
+      <ol class="flux">
+        <li><strong>Le client commande</strong>Il paie ton prix de vente sur ta boutique Shopify.</li>
+        <li><strong>L'appli transmet</strong>Elle prépare la commande chez le fournisseur, avec l'adresse du client.</li>
+        <li><strong>Tu paies le fournisseur</strong>Tu règles le prix d'achat, en général en un clic.</li>
+        <li><strong>Le fournisseur expédie</strong>Le colis part directement chez le client.</li>
+        <li><strong>Le suivi remonte</strong>Le numéro de suivi arrive dans Shopify, qui l'envoie au client par e-mail.</li>
+      </ol>
+      <div class="marge">Marge = prix de vente − prix fournisseur − livraison payée − frais de paiement − publicité</div>
+      <div class="fiche">
+        <h3>Fiche : DSers en 5 points</h3>
+        <p><strong>DSers</strong> est une appli Shopify, partenaire officiel d'AliExpress. Elle a un plan gratuit pour démarrer. C'est celle qu'on a utilisée pour AironiMenager.</p>
+        <ul class="cases">
+          <li><input type="checkbox" id="c0-1"><label for="c0-1"><strong>Importer</strong><small>Tu copies le lien d'un produit AliExpress, DSers le crée dans ta boutique (photos, variantes). Tu réécris ensuite le titre, la description et les prix.</small></label></li>
+          <li><input type="checkbox" id="c0-2"><label for="c0-2"><strong>Mapper (relier)</strong><small>Chaque variante de ta boutique est reliée à la variante exacte du fournisseur. Mapping de base pour une option, mapping avancé dès qu'il y a deux options (ex. couleur × taille).</small></label></li>
+          <li><input type="checkbox" id="c0-3"><label for="c0-3"><strong>Commander</strong><small>Quand un client achète, la commande apparaît dans DSers : tu la passes et la paies chez le fournisseur.</small></label></li>
+          <li><input type="checkbox" id="c0-4"><label for="c0-4"><strong>Suivre</strong><small>Le numéro de suivi revient automatiquement dans Shopify.</small></label></li>
+          <li><input type="checkbox" id="c0-5"><label for="c0-5"><strong>Régler les prix</strong><small>Choisir si DSers touche à tes prix. Conseil : « ne rien faire » et fixer ses prix soi-même. Effacer le prix barré qu'il importe (c'est le prix fournisseur, pas un vrai ancien prix).</small></label></li>
+        </ul>
+        <p><strong>À surveiller :</strong> l'entrepôt d'expédition (Europe ou Asie change tout le délai), le stock du fournisseur qui peut tomber à zéro, et le paiement rapide des commandes pour ne pas retarder l'envoi.</p>
+      </div>
+    </section>
+
+    <section id="applis">
+      <div class="entete"><span class="num">Boîte à outils</span><h2>Les applis selon la situation</h2><p class="but">DSers n'est qu'une option. Choisis selon d'où viennent tes produits et ce dont tu as besoin. Commence avec le minimum : chaque appli ajoute un coût et ralentit un peu la boutique.</p></div>
+      <div class="tab">
+        <table>
+          <thead><tr><th>Situation</th><th>Appli conseillée</th><th>Alternatives</th><th>À savoir</th></tr></thead>
+          <tbody>
+            <tr><td>Produits AliExpress</td><td>DSers</td><td>AutoDS, Zendrop</td><td>Prix bas, délais souvent longs depuis l'Asie <span class="pill">Plan gratuit</span></td></tr>
+            <tr><td>Livraison rapide en Europe</td><td>BigBuy</td><td>Spocket, Syncee</td><td>Fournisseurs avec entrepôts européens, prix d'achat plus élevés</td></tr>
+            <tr><td>Grand choix et entrepôts dans plusieurs pays</td><td>CJ Dropshipping</td><td>AutoDS</td><td>Entrepôts en Asie, Europe et États-Unis selon les produits</td></tr>
+            <tr><td>Produits personnalisés (t-shirts, mugs)</td><td>Printful</td><td>Printify</td><td>Impression à la demande, pas de stock</td></tr>
+            <tr><td>Avis clients</td><td>Judge.me</td><td>Loox</td><td>Uniquement de vrais avis, jamais importés en masse <span class="pill">Plan gratuit</span></td></tr>
+            <tr><td>E-mails et relance de panier</td><td>Shopify Messaging</td><td>Klaviyo</td><td>Inclus dans Shopify, quota d'envois gratuit chaque mois</td></tr>
+            <tr><td>Page « Merci » et suivi de commande</td><td>Checkout Blocks</td><td>—</td><td>Appli de Shopify <span class="pill">Gratuite</span></td></tr>
+            <tr><td>Google Shopping et Google Ads</td><td>Google &amp; YouTube</td><td>—</td><td>Appli de Shopify, relie Merchant Center <span class="pill">Gratuite</span></td></tr>
+            <tr><td>Publicités Facebook et Instagram</td><td>Facebook &amp; Instagram</td><td>—</td><td>Appli de Meta, installe le suivi des ventes</td></tr>
+            <tr><td>Suivi de colis pour le client</td><td>Suivi Shopify (inclus)</td><td>Parcel Panel, AfterShip</td><td>Utile si beaucoup de colis viennent d'Asie</td></tr>
+            <tr><td>Vendre dans un autre pays</td><td>Translate &amp; Adapt</td><td>Weglot</td><td>Avec Shopify Markets pour les devises <span class="pill">Gratuite</span></td></tr>
+            <tr><td>Cookies (obligatoire en Europe)</td><td>Bannière Shopify (inclus)</td><td>—</td><td>Paramètres → Confidentialité des clients</td></tr>
+            <tr><td>Visuels et vidéos</td><td>Canva</td><td>Higgsfield</td><td>Le produit montré doit être exactement celui vendu</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note regle"><b>Avant d'installer une appli</b><p>Lire ce qu'elle demande comme accès, vérifier son prix après l'essai gratuit, et la désinstaller si elle ne sert plus.</p></div>
+    </section>
+
+    <section id="regles">
+      <div class="entete"><span class="num">Avant tout</span><h2>Les règles d'or</h2></div>
+      <div class="regles">
+        <div><strong>Les CGV font foi</strong><p>Chaque délai, prix de livraison, durée de retour ou moyen de paiement écrit sur le site doit être identique aux CGV et aux réglages Shopify.</p></div>
+        <div><strong>Que des chiffres fabricant</strong><p>Jamais d'estimation. Si on ne sait pas : « Non communiquée ». Toujours signaler « annoncé par le fabricant ».</p></div>
+        <div><strong>Aucune promesse sans preuve</strong><p>Pas de best-seller, de prix barré, de « nouveau prix », d'allégation santé ou de SAV fabricant sans données réelles.</p></div>
+        <div><strong>Un produit = ce qu'il est</strong><p>Ne jamais présenter un modèle pour un autre. Une vidéo d'un modèle proche se signale comme telle.</p></div>
+        <div><strong>Tester ordinateur et mobile</strong><p>Chaque changement est vérifié en ligne, sur grand écran et en largeur téléphone (390 px).</p></div>
+        <div><strong>Garder une trace</strong><p>Un journal des modifications et une sauvegarde avant chaque changement de masse (produits, photos, variantes).</p></div>
+      </div>
+    </section>
+
+    <section id="e1">
+      <div class="entete"><span class="num">Étape 1</span><h2>Statut et marché</h2><p class="but">À faire avant de vendre quoi que ce soit : sans statut, la vente en ligne régulière est illégale et Google refuse les pages légales incomplètes.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c1-1"><label for="c1-1"><strong>Créer la micro-entreprise</strong><small>Gratuit sur formalites.entreprises.gouv.fr. Récupérer le SIRET.</small></label></li>
+        <li><input type="checkbox" id="c1-2"><label for="c1-2"><strong>Choisir le régime de TVA</strong><small>En franchise : mention « TVA non applicable, art. 293 B du CGI » sur le site et les factures.</small></label></li>
+        <li><input type="checkbox" id="c1-3"><label for="c1-3"><strong>Adhérer à un médiateur de la consommation</strong><small>Obligatoire pour vendre aux particuliers (environ 50 € par an). Son nom et son site vont dans les CGV.</small></label></li>
+        <li><input type="checkbox" id="c1-4"><label for="c1-4"><strong>Fixer un seul marché de départ</strong><small>France d'abord, puis Royaume-Uni, puis États-Unis. Retirer les variantes inutiles (prises US/AU) et les sauvegarder pour plus tard.</small></label></li>
+        <li><input type="checkbox" id="c1-5"><label for="c1-5"><strong>Réserver le nom de domaine et une adresse e-mail unique</strong><small>Une seule adresse de contact, la même partout (boutique, politiques, e-mails, données Google).</small></label></li>
+      </ul>
+    </section>
+
+    <section id="e2">
+      <div class="entete"><span class="num">Étape 2</span><h2>Marque</h2><p class="but">Une identité simple et cohérente, décidée une fois pour toutes, avant de toucher au thème.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c2-1"><label for="c2-1"><strong>Logo en trois versions</strong><small>Couleur pour fond clair, blanc pour fond sombre, blanc simple pour les petites tailles et les e-mails.</small></label></li>
+        <li><input type="checkbox" id="c2-2"><label for="c2-2"><strong>Palette avec contrastes calculés</strong><small>Bouton d'achat au moins 4,5:1 avec son texte. Une couleur trop pâle reste décorative, jamais pour du texte.</small></label></li>
+        <li><input type="checkbox" id="c2-3"><label for="c2-3"><strong>Deux polices maximum</strong><small>Une pour les titres, une pour le texte (AironiMenager : Poppins Light et Inter), servies par la boutique pour la vitesse.</small></label></li>
+        <li><input type="checkbox" id="c2-4"><label for="c2-4"><strong>Visuel d'accueil</strong><small>Produit entier, lisible au-dessus de la ligne de flottaison, recadrage vérifié sur mobile.</small></label></li>
+      </ul>
+    </section>
+
+    <section id="e3">
+      <div class="entete"><span class="num">Étape 3</span><h2>Choix des produits</h2><p class="but">Peu de produits, bien choisis, dont on connaît l'origine et le délai.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c3-1"><label for="c3-1"><strong>Vérifier l'entrepôt d'expédition de chaque produit</strong><small>Europe (5 à 10 jours ouvrés) ou Asie (10 à 20 jours ouvrés). Étiqueter les produits d'Asie (« Expédition Asie ») pour afficher le bon délai.</small></label></li>
+        <li><input type="checkbox" id="c3-2"><label for="c3-2"><strong>Vérifier l'authenticité des marques connues</strong><small>Une grande marque doit venir de sa boutique officielle. Sinon, risque de contrefaçon et suspension Google.</small></label></li>
+        <li><input type="checkbox" id="c3-3"><label for="c3-3"><strong>Prévoir les consommables du produit vedette</strong><small>Filtres, brosses, sacs : vendus en lots, marqués « compatible », avec la mention « pièces de fabrication tierce, pas d'origine ».</small></label></li>
+        <li><input type="checkbox" id="c3-4"><label for="c3-4"><strong>Supprimer ce qu'on ne vend pas</strong><small>Accessoires d'appareils absents du catalogue, produits en rupture chez le fournisseur : brouillon ou suppression.</small></label></li>
+      </ul>
+    </section>
+
+    <section id="e4">
+      <div class="entete"><span class="num">Étape 4</span><h2>Fiches produits</h2><p class="but">C'est là que Google contrôle le plus. Chaque phrase doit pouvoir être prouvée par la fiche ou les visuels du fabricant.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c4-1"><label for="c4-1"><strong>Titres en français, courts</strong><small>« Marque Modèle — Type ». Pas de titre de marketplace en anglais bourré de mots-clés.</small></label></li>
+        <li><input type="checkbox" id="c4-2"><label for="c4-2"><strong>Description en blocs</strong><small>Une phrase d'accroche, 3 à 5 points forts avec un titre chacun, puis un tableau « Caractéristiques » et la ligne « Caractéristiques annoncées par le fabricant ».</small></label></li>
+        <li><input type="checkbox" id="c4-3"><label for="c4-3"><strong>Bloc « Pourquoi celui-ci ? »</strong><small>« Idéal si… » plus 4 raisons, et un mini-comparatif avec les produits de la même famille (prix, aspiration, autonomie, le plus).</small></label></li>
+        <li><input type="checkbox" id="c4-4"><label for="c4-4"><strong>Croiser les chiffres avec les photos du fabricant</strong><small>Sur AironiMenager, trois autonomies étaient fausses par rapport aux visuels. Les photos font foi.</small></label></li>
+        <li><input type="checkbox" id="c4-5"><label for="c4-5"><strong>Photos propres</strong><small>1re photo : produit seul sur fond blanc. Retirer les bandeaux AliExpress et toute photo qui promet une autre livraison ou garantie. Pour un lot, la 1re photo montre le plus petit lot vendu.</small></label></li>
+        <li><input type="checkbox" id="c4-6"><label for="c4-6"><strong>Variantes claires</strong><small>Une photo par variante. Nom d'option sans doublon (« Taille du lot » et non « Quantité », déjà utilisé par le sélecteur).</small></label></li>
+        <li><input type="checkbox" id="c4-7"><label for="c4-7"><strong>Marque, catégorie Google et collection</strong><small>Le champ « Fournisseur » = la vraie marque. Catégorie de la taxonomie Shopify renseignée. Chaque produit rangé dans une collection.</small></label></li>
+      </ul>
+      <div class="note regle"><b>Interdit sur une fiche</b><p>Estimations présentées comme des faits, « élimine 99,99 % des bactéries », « SAV 24 mois » non prouvé, « le meilleur rapport qualité-prix » sans calcul, durée de vie promise, superlatif faux à l'échelle du catalogue.</p></div>
+    </section>
+
+    <section id="e5">
+      <div class="entete"><span class="num">Étape 5</span><h2>Appli fournisseur et prix</h2><p class="but">Relier chaque variante au bon article fournisseur (DSers, AutoDS, BigBuy… voir la boîte à outils), et garder la main sur les prix.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c5-1"><label for="c5-1"><strong>Relier (mapper) chaque variante</strong><small>Chaque variante vendue doit pointer vers la bonne variante fournisseur, sinon le client reçoit le mauvais article.</small></label></li>
+        <li><input type="checkbox" id="c5-2"><label for="c5-2"><strong>Mise à jour automatique des prix désactivée</strong><small>C'est toi qui fixes les prix. Sur DSers : « Ne rien faire », et ne pas utiliser « Modification manuelle du prix ».</small></label></li>
+        <li><input type="checkbox" id="c5-3"><label for="c5-3"><strong>Vider les prix barrés importés</strong><small>Beaucoup d'applis remplissent le prix barré avec le prix fournisseur : c'est un faux prix de référence, à effacer.</small></label></li>
+        <li><input type="checkbox" id="c5-4"><label for="c5-4"><strong>Règle de prix des accessoires</strong><small>Environ deux fois le coût fournisseur, arrondi en ,90. Comparer avec le marché pour les appareils.</small></label></li>
+      </ul>
+    </section>
+
+    <section id="e6">
+      <div class="entete"><span class="num">Étape 6</span><h2>Thème et vitrine</h2><p class="but">Partir de Dawn sans le modifier : toute la personnalisation vit dans nos propres fichiers.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c6-1"><label for="c6-1"><strong>Une surcouche, pas de retouche de Dawn</strong><small>Un fichier CSS de marque chargé après base.css, des sections « am-… » à nous, un journal des modifications.</small></label></li>
+        <li><input type="checkbox" id="c6-2"><label for="c6-2"><strong>Accueil</strong><small>Visuel, réassurance (livraison, garantie 2 ans, 14 jours, contact), code promo, produit phare, univers, sélection, photos en situation, mise en avant chiffrée, comparateur par usage, FAQ, newsletter.</small></label></li>
+        <li><input type="checkbox" id="c6-3"><label for="c6-3"><strong>Comparateur par usage</strong><small>Le client coche ses besoins et son budget, on classe les appareils. Chiffres fabricant uniquement, avec la mention.</small></label></li>
+        <li><input type="checkbox" id="c6-4"><label for="c6-4"><strong>Mobile soigné</strong><small>Pas de bande blanche (<code>overflow-x: clip</code>), visuel recadré, en-tête collant qui ne disparaît pas quand on ouvre le menu.</small></label></li>
+        <li><input type="checkbox" id="c6-5"><label for="c6-5"><strong>SEO de base</strong><small>Meta description par page, fil d'Ariane, données « Organization » avec l'e-mail, l'adresse et le téléphone au format +33.</small></label></li>
+        <li><input type="checkbox" id="c6-6"><label for="c6-6"><strong>Pied de page</strong><small>Liens légaux, « Contactez-nous » à la fin, « Propulsé par Shopify » retiré, bouton « Suivre sur Shop » désactivé.</small></label></li>
+        <li><input type="checkbox" id="c6-7"><label for="c6-7"><strong>Vitesse</strong><small>Polices hébergées par la boutique, images recadrées, animations désactivées si « réduire les animations ».</small></label></li>
+      </ul>
+    </section>
+
+    <section id="e7">
+      <div class="entete"><span class="num">Étape 7</span><h2>Fiche produit (le gabarit)</h2><p class="but">Le client doit comprendre en 10 secondes ce qu'il achète, quand il le reçoit et pourquoi ce modèle.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c7-1"><label for="c7-1"><strong>Bouton « Voir la fiche produit »</strong><small>Juste sous le prix, il fait défiler jusqu'à la description complète.</small></label></li>
+        <li><input type="checkbox" id="c7-2"><label for="c7-2"><strong>Dates de livraison estimées</strong><small>Calculées le jour de la visite, en jours ouvrés, selon l'origine (Europe ou Asie).</small></label></li>
+        <li><input type="checkbox" id="c7-3"><label for="c7-3"><strong>Encadré de compatibilité pour les accessoires</strong><small>Avec le lien vers l'appareil compatible, et sur l'appareil, un lien vers ses consommables.</small></label></li>
+        <li><input type="checkbox" id="c7-4"><label for="c7-4"><strong>Onglets</strong><small>Description, caractéristiques, livraison et retours, garantie : textes identiques aux CGV.</small></label></li>
+        <li><input type="checkbox" id="c7-5"><label for="c7-5"><strong>Plus de photos sur mobile</strong><small>Une section « En images » qui fait défiler les photos sous la fiche.</small></label></li>
+        <li><input type="checkbox" id="c7-6"><label for="c7-6"><strong>Barre d'achat collante et « Vous aimerez aussi »</strong></label></li>
+      </ul>
+    </section>
+
+    <section id="e8">
+      <div class="entete"><span class="num">Étape 8</span><h2>Livraison et pages légales</h2><p class="but">Un seul tarif simple, des délais tenables et sept pages légales cohérentes entre elles.</p></div>
+      <div class="tab">
+        <table>
+          <thead><tr><th>Réglage</th><th>Ce qu'on a choisi</th><th>Pourquoi</th></tr></thead>
+          <tbody>
+            <tr><td>Tarif standard</td><td>7,32 €, offert dès 65 €</td><td>Un seul tarif, facile à afficher partout</td></tr>
+            <tr><td>Délais</td><td>Europe 5–10 j ouvrés · Asie 10–20 j ouvrés</td><td>Délais réels des fournisseurs</td></tr>
+            <tr><td>Express</td><td>Supprimé</td><td>Délai impossible à garantir en dropshipping</td></tr>
+            <tr><td>Dates estimées Shopify</td><td>Manuel</td><td>Évite des dates automatiques trop optimistes</td></tr>
+            <tr><td>Zone</td><td>France uniquement</td><td>Un marché à la fois</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c8-1"><label for="c8-1"><strong>Les sept politiques</strong><small>Coordonnées, mentions légales, CGV, conditions d'utilisation, expédition, retours et remboursement, confidentialité.</small></label></li>
+        <li><input type="checkbox" id="c8-2"><label for="c8-2"><strong>Mentions obligatoires</strong><small>SIRET, forme juridique, TVA, adresse, e-mail, téléphone, directeur de la publication, hébergeur, médiateur. Aucun « [À COMPLÉTER] » visible au lancement.</small></label></li>
+        <li><input type="checkbox" id="c8-3"><label for="c8-3"><strong>Droits du client bien écrits</strong><small>14 jours de rétractation avec le formulaire type, garantie légale de conformité de 2 ans, règles de livraison (articles L216-1 et L216-6).</small></label></li>
+        <li><input type="checkbox" id="c8-4"><label for="c8-4"><strong>Téléphone discret mais présent</strong><small>Dans les pages légales et les données Google, pas en tête de site.</small></label></li>
+        <li><input type="checkbox" id="c8-5"><label for="c8-5"><strong>Bannière cookies active</strong></label></li>
+      </ul>
+    </section>
+
+    <section id="e9">
+      <div class="entete"><span class="num">Étape 9</span><h2>Panier et paiement</h2><p class="but">Le parcours d'achat doit ressembler au site et rassurer jusqu'au bout.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c9-1"><label for="c9-1"><strong>Page panier</strong><small>Étapes « Panier, Livraison, Paiement », récapitulatif (économie, livraison, dates estimées), suggestions adaptées au panier en un clic.</small></label></li>
+        <li><input type="checkbox" id="c9-2"><label for="c9-2"><strong>Tiroir panier</strong><small>Même récapitulatif en plus compact, deux suggestions. Sur mobile, le bouton de paiement passe avant les suggestions.</small></label></li>
+        <li><input type="checkbox" id="c9-3"><label for="c9-3"><strong>Barres de paliers justes</strong><small>« Plus que X € pour la livraison offerte », puis la promo, calculée seulement sur les produits concernés par le code.</small></label></li>
+        <li><input type="checkbox" id="c9-4"><label for="c9-4"><strong>Code promo cohérent partout</strong><small>Bandeau, bloc promo, panier et réglage Shopify disent la même chose : montant, produits concernés, minimum, date de fin, une utilisation par client.</small></label></li>
+        <li><input type="checkbox" id="c9-5"><label for="c9-5"><strong>Page de paiement aux couleurs du site</strong><small>Logo, couleurs, polices, champ de réduction visible, saisie automatique de l'adresse.</small></label></li>
+        <li><input type="checkbox" id="c9-6"><label for="c9-6"><strong>Pages « Merci » et « Statut de la commande »</strong><small>App gratuite Checkout Blocks (Shopify) : bloc délais et suivi, bloc 14 jours et garantie.</small></label></li>
+      </ul>
+    </section>
+
+    <section id="e10">
+      <div class="entete"><span class="num">Étape 10</span><h2>E-mails</h2><p class="but">Les e-mails sont la suite du site : même logo, mêmes couleurs, mêmes délais.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c10-1"><label for="c10-1"><strong>Confirmation de commande</strong><small>En-tête sombre avec logo blanc, récapitulatif, délais Europe et Asie, objet « Merci ! Votre commande … est confirmée ».</small></label></li>
+        <li><input type="checkbox" id="c10-2"><label for="c10-2"><strong>Relance de panier abandonné</strong><small>Dans Shopify Messaging : un premier e-mail quelques heures après l'abandon, avec le panier et un bouton pour le reprendre.</small></label></li>
+        <li><input type="checkbox" id="c10-3"><label for="c10-3"><strong>Logo et couleur d'accent des e-mails</strong><small>Paramètres → Notifications → personnaliser l'apparence.</small></label></li>
+      </ul>
+    </section>
+
+    <section id="e11">
+      <div class="entete"><span class="num">Étape 11</span><h2>Contrôle « rien de trompeur » avant Google Ads</h2><p class="but">Google suspend les comptes pour « informations trompeuses ». À refaire produit par produit avant chaque lancement de campagne.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c11-1"><label for="c11-1"><strong>Même e-mail partout</strong><small>Réglages boutique, 7 politiques, page contact, pied de page, données Google.</small></label></li>
+        <li><input type="checkbox" id="c11-2"><label for="c11-2"><strong>Chaque chiffre vérifié contre les visuels du fabricant</strong><small>Sinon « Non communiquée ». Mention « annoncé par le fabricant » sur les fiches et comparatifs.</small></label></li>
+        <li><input type="checkbox" id="c11-3"><label for="c11-3"><strong>Aucune allégation santé, SAV, durée de vie ou superlatif non prouvé</strong></label></li>
+        <li><input type="checkbox" id="c11-4"><label for="c11-4"><strong>Photos sans logo de marketplace ni promesse contradictoire</strong><small>Et ce que montre la photo est bien inclus (accessoires, flacon, brosses).</small></label></li>
+        <li><input type="checkbox" id="c11-5"><label for="c11-5"><strong>Aucun prix barré ni « nouveau prix » sans historique réel</strong></label></li>
+        <li><input type="checkbox" id="c11-6"><label for="c11-6"><strong>Photos de fabricant présentées comme telles</strong><small>Pas de « nos clients », « chez vous, en vrai » sur des photos de fabricant.</small></label></li>
+        <li><input type="checkbox" id="c11-7"><label for="c11-7"><strong>Promesses du site identiques aux CGV</strong><small>Délais, frais, retours, garantie, moyens de paiement réellement activés.</small></label></li>
+        <li><input type="checkbox" id="c11-8"><label for="c11-8"><strong>Pages légales complètes</strong></label></li>
+      </ul>
+    </section>
+
+    <section id="e12">
+      <div class="entete"><span class="num">Étape 12</span><h2>Lancement</h2><p class="but">Dans cet ordre : chaque étape débloque la suivante.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c12-1"><label for="c12-1"><strong>Activer Shopify Payments</strong><small>Identité et IBAN. Apple Pay et Google Pay arrivent avec.</small></label></li>
+        <li><input type="checkbox" id="c12-2"><label for="c12-2"><strong>Connecter PayPal</strong><small>Très utilisé en France.</small></label></li>
+        <li><input type="checkbox" id="c12-3"><label for="c12-3"><strong>Brancher le domaine et le mettre en principal</strong><small>Puis l'adresse contact@ et l'expéditeur des e-mails.</small></label></li>
+        <li><input type="checkbox" id="c12-4"><label for="c12-4"><strong>Commande test de bout en bout</strong><small>Paiement, e-mail, page « Merci », commande qui remonte dans ton appli fournisseur et part chez lui.</small></label></li>
+        <li><input type="checkbox" id="c12-5"><label for="c12-5"><strong>Retirer le mot de passe</strong><small>Boutique en ligne → Préférences. Google ne peut pas visiter un site fermé.</small></label></li>
+        <li><input type="checkbox" id="c12-6"><label for="c12-6"><strong>App Google &amp; YouTube et Merchant Center</strong><small>Relier son compte Google, vérifier le flux produits, corriger les refus un par un.</small></label></li>
+      </ul>
+    </section>
+
+    <section id="e13">
+      <div class="entete"><span class="num">Étape 13</span><h2>Après le lancement</h2></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="c13-1"><label for="c13-1"><strong>Vidéos de clients</strong><small>Uniquement avec l'accord écrit du créateur.</small></label></li>
+        <li><input type="checkbox" id="c13-2"><label for="c13-2"><strong>Visuels générés (Higgsfield)</strong><small>Le produit montré doit rester exactement celui vendu.</small></label></li>
+        <li><input type="checkbox" id="c13-3"><label for="c13-3"><strong>Nouveau marché</strong><small>Royaume-Uni puis États-Unis : variantes de prise, tarifs, délais et pages légales adaptés.</small></label></li>
+      </ul>
+    </section>
+
+    <section id="pieges">
+      <div class="entete"><span class="num">Pour la technique</span><h2>Pièges techniques déjà rencontrés</h2><p class="but">Chacun nous a coûté du temps une fois. Les connaître évite de les refaire.</p></div>
+      <div class="note piege"><b>Thème</b><p>Envoyer une section <em>avant</em> le gabarit qui utilise ses nouveaux réglages, sinon Shopify les efface. Comparer la version en ligne avant d'écraser un gabarit (l'éditeur a pu le modifier).</p></div>
+      <div class="note piege"><b>Handles</b><p>Les sections stockent l'adresse (handle) du produit. Renommer une URL vide la section : la corriger dans le gabarit.</p></div>
+      <div class="note piege"><b>Éditeur de texte riche</b><p>Les titres modifiables n'acceptent pas <code>class=""</code> : passer par <code>&lt;em&gt;</code> et le styler en CSS. Les ombres de Dawn avancent par pas de 5 %.</p></div>
+      <div class="note piege"><b>Politiques</b><p>Les pages <code>/policies/</code> ignorent le gabarit de page : les styler via <code>.shopify-policy__*</code>.</p></div>
+      <div class="note piege"><b>Panier</b><p>Dawn remplace le HTML du panier à chaque changement : un script placé dedans ne se relance pas. Tout mettre dans un fichier JS global (délégation d'événements). Une réduction ciblée sur des produits se lit dans <code>cart.discount_applications</code>, ligne par ligne.</p></div>
+      <div class="note piege"><b>Métachamps et API</b><p>L'espace de noms doit faire 3 caractères minimum. L'API ne peut pas publier un produit sur les canaux : passer par l'import CSV. Le mode privé (mot de passe) se coupe à la main dans l'admin.</p></div>
+      <div class="note piege"><b>Appli fournisseur</b><p>Sur DSers, le mapping avancé est obligatoire dès deux options. Dans toutes les applis, vérifier après chaque enregistrement que le lien variante ↔ fournisseur a bien été pris.</p></div>
+      <div class="note piege"><b>Photos partagées</b><p>Une même image peut servir à plusieurs produits : la retirer d'un produit ne la retire pas des autres. Sauvegarder avant de supprimer.</p></div>
+    </section>
+
+    <section id="lexique">
+      <div class="entete"><span class="num">À garder sous la main</span><h2>Lexique</h2></div>
+      <dl class="lex">
+        <dt>Dropshipping</dt><dd>Vente sans stock : le fournisseur expédie directement au client.</dd>
+        <dt>Fournisseur</dt><dd>Celui qui fabrique ou stocke le produit et l'expédie (vendeur AliExpress, grossiste européen…).</dd>
+        <dt>Mapping</dt><dd>Lien entre une variante de ta boutique et la variante du fournisseur.</dd>
+        <dt>Variante</dt><dd>Une version d'un produit : couleur, taille, lot de 6 ou de 12…</dd>
+        <dt>SKU</dt><dd>Code unique d'une variante, utilisé pour s'y retrouver entre boutique et fournisseur.</dd>
+        <dt>Prix barré</dt><dd>Ancien prix affiché à côté du prix actuel. Légal seulement s'il a vraiment été pratiqué (plus bas prix des 30 derniers jours).</dd>
+        <dt>Thème</dt><dd>L'apparence de la boutique. Dawn est le thème gratuit de Shopify, une bonne base.</dd>
+        <dt>Métachamp</dt><dd>Champ personnalisé ajouté à un produit (ex. autonomie, aspiration) pour l'afficher sur la fiche.</dd>
+        <dt>CGV</dt><dd>Conditions générales de vente : le contrat entre toi et le client. Tout le site doit dire la même chose.</dd>
+        <dt>Merchant Center</dt><dd>L'outil de Google où arrivent tes produits pour Google Shopping. Il vérifie que rien n'est trompeur.</dd>
+        <dt>Taux de conversion</dt><dd>Part des visiteurs qui achètent. 1 à 3 % est un ordre de grandeur courant en e-commerce.</dd>
+        <dt>Panier abandonné</dt><dd>Client qui a rempli son panier sans payer. Un e-mail de relance en récupère une partie.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="pied">Établi à partir du lancement de la boutique AironiMenager (septembre 2026). Les montants, délais et seuils cités sont ceux de cette boutique : à adapter à chaque projet. Les applis et leurs offres évoluent : vérifie toujours le prix actuel avant d'installer.</footer>
+</div>
+
+<script>
+(function(){
+  var cles='methode-boutique-cases';
+  var etat={};
+  try{etat=JSON.parse(localStorage.getItem(cles)||'{}')||{};}catch(e){etat={};}
+  var cases=[].slice.call(document.querySelectorAll('ul.cases input[type=checkbox]'));
+  function maj(){
+    var n=0;
+    cases.forEach(function(c){c.closest('li').classList.toggle('fait',c.checked); if(c.checked)n++;});
+    document.getElementById('jauge').style.width=(cases.length?Math.round(n*100/cases.length):0)+'%';
+    document.getElementById('compte').textContent=n+' étape'+(n>1?'s':'')+' cochée'+(n>1?'s':'')+' sur '+cases.length;
+  }
+  function sauver(){try{localStorage.setItem(cles,JSON.stringify(etat));}catch(e){}}
+  cases.forEach(function(c){
+    c.checked=!!etat[c.id];
+    c.addEventListener('change',function(){etat[c.id]=c.checked;sauver();maj();});
+  });
+  document.getElementById('raz').addEventListener('click',function(){
+    etat={};cases.forEach(function(c){c.checked=false;});sauver();maj();
+  });
+  maj();
+})();
+</script>
+
+</body>
+</html>
