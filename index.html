@@ -117,6 +117,7 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
       <li><a href="#principe"><span class="n">?</span>Le dropshipping et DSers</a></li>
       <li><a href="#applis"><span class="n">+</span>Les applis par situation</a></li>
       <li><a href="#hybride"><span class="n">≈</span>La boutique hybride</a></li>
+      <li><a href="#plateforme"><span class="n">€</span>Shopify ou WooCommerce</a></li>
       <li><a href="#regles"><span class="n">★</span>Les règles d'or</a></li>
       <li><a href="#e1"><span class="n">1</span>Statut et marché</a></li>
       <li><a href="#e2"><span class="n">2</span>Marque</a></li>
@@ -200,6 +201,43 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
         <li><input type="checkbox" id="ch-3"><label for="ch-3"><strong>Déclarer chaque lieu de stock dans Shopify</strong><small>Paramètres → Emplacements : ton stock d'un côté, les fournisseurs de l'autre, pour que les délais et les ruptures restent justes.</small></label></li>
         <li><input type="checkbox" id="ch-4"><label for="ch-4"><strong>Prévenir le client si sa commande part de deux endroits</strong><small>« Votre commande peut arriver en plusieurs colis, sans frais supplémentaires. »</small></label></li>
       </ul>
+    </section>
+
+    <section id="plateforme">
+      <div class="entete"><span class="num">Choix de départ</span><h2>Shopify ou WooCommerce ? Et les paiements</h2><p class="but">Shopify est un service tout-en-un qu'on loue. WooCommerce est une extension gratuite de WordPress qu'on installe et qu'on entretient soi-même. Le bon choix dépend surtout du temps que tu veux passer sur la technique.</p></div>
+      <div class="tab">
+        <table>
+          <thead><tr><th>Sujet</th><th>Shopify</th><th>WooCommerce</th></tr></thead>
+          <tbody>
+            <tr><td>Hébergement</td><td>Inclus, géré par Shopify</td><td>À louer chez un hébergeur (o2switch, Hostinger, OVH…), environ 5 à 30 € par mois</td></tr>
+            <tr><td>Mises à jour, sécurité, sauvegardes</td><td>Faites par Shopify</td><td>À ta charge : WordPress, WooCommerce et chaque extension</td></tr>
+            <tr><td>Pic de trafic (campagne pub)</td><td>Absorbé par Shopify</td><td>Dépend de l'offre d'hébergement, un petit serveur peut ralentir</td></tr>
+            <tr><td>Paiement</td><td>Shopify Payments intégré, Shop Pay, page de paiement très optimisée</td><td>Une extension par moyen de paiement (Stripe ou WooPayments, PayPal, Alma…), page de paiement à soigner soi-même</td></tr>
+            <tr><td>Dropshipping, e-mails, Google</td><td>DSers, Messaging, Google &amp; YouTube en quelques clics</td><td>DSers existe aussi ; e-mails (MailPoet, Brevo, Klaviyo) et Google via extensions</td></tr>
+            <tr><td>Coût mensuel</td><td>Abonnement + quelques applis, zéro maintenance</td><td>Hébergement + extensions payantes (souvent 10 à 40 €), mais du temps de maintenance</td></tr>
+            <tr><td>Quand le choisir</td><td>Pour lancer vite et se concentrer sur la vente <span class="pill">Conseillé pour débuter</span></td><td>Boutique avec beaucoup de contenu (blog, SEO) ou besoin de tout contrôler, une fois les ventes stables</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Les solutions de paiement et leurs versements</h3>
+      <div class="tab">
+        <table>
+          <thead><tr><th>Solution</th><th>Frais (ordre de grandeur)</th><th>Versements</th><th>À savoir</th></tr></thead>
+          <tbody>
+            <tr><td>Shopify Payments</td><td>Selon le forfait, autour de 1,5 à 2 % par carte européenne</td><td>3 jours calendaires en France, sans frais de retrait (minimum 10 €)</td><td>Si on utilise une autre solution sur Shopify, Shopify ajoute une commission</td></tr>
+            <tr><td>Stripe / WooPayments</td><td>Environ 1,5 % + 0,25 € par carte européenne</td><td>Quelques jours ouvrés</td><td>La référence sur WooCommerce</td></tr>
+            <tr><td>PayPal</td><td>Plus cher que la carte</td><td>Solde PayPal, virement vers la banque</td><td>Rassure une partie des clients : à proposer en plus</td></tr>
+            <tr><td>Whop</td><td>2,7 % + 0,30 $, plus 1,5 % carte étrangère et 1 % de conversion : vers 5 % pour un client français</td><td>Retrait payant (2,50 $ le lendemain, 4 % + 1 $ en instantané)</td><td>Pensé pour les produits numériques et les communautés, société américaine : peu adapté à une boutique française de produits physiques</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note piege"><b>Versements bloqués : ce qu'on entend souvent</b><p>Au début, Shopify peut retenir l'argent le temps de vérifier l'identité, ou imposer un délai de 30 jours dans certains secteurs. Ce n'est pas propre à Shopify : Stripe, PayPal et Whop font pareil dès qu'ils voient du risque (boutique récente, délais longs, litiges). Ce qui l'évite : délais annoncés et tenus, numéros de suivi, pages légales complètes, peu de litiges.</p></div>
+      <ul class="cases">
+        <li><input type="checkbox" id="cp-1"><label for="cp-1"><strong>Choisir la plateforme avant de construire</strong><small>Passer de l'une à l'autre plus tard, c'est refaire le thème, les pages, les e-mails et les réglages.</small></label></li>
+        <li><input type="checkbox" id="cp-2"><label for="cp-2"><strong>Comparer le coût réel d'un paiement</strong><small>Frais par vente + carte étrangère + conversion de devise + frais de retrait, pas seulement le pourcentage affiché.</small></label></li>
+        <li><input type="checkbox" id="cp-3"><label for="cp-3"><strong>Vérifier les tarifs du jour</strong><small>Les frais changent : toujours relire la page de prix officielle avant de décider.</small></label></li>
+      </ul>
+      <div class="note regle"><b>Pour AironiMenager</b><p>Shopify Payments + PayPal, et éventuellement le paiement en 3 ou 4 fois (Alma) pour les appareils chers. Passer sur WooCommerce aurait obligé à tout refaire pour quelques dizaines d'euros d'économie par mois.</p></div>
     </section>
 
     <section id="regles">
@@ -420,6 +458,10 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
         <dt>Niche</dt><dd>Le petit marché précis que vise la boutique (ex. aspirateurs et entretien de la maison).</dd>
         <dt>D2C / DTC</dt><dd>« Direct to consumer » : une marque qui vend directement au client, sans magasin intermédiaire.</dd>
         <dt>B2C / B2B</dt><dd>Vente aux particuliers (B2C) ou aux entreprises (B2B).</dd>
+        <dt>WooCommerce</dt><dd>Extension gratuite qui transforme un site WordPress en boutique. Hébergement, mises à jour et sécurité sont à ta charge.</dd>
+        <dt>Passerelle de paiement</dt><dd>Le service qui encaisse la carte du client pour toi : Shopify Payments, Stripe, PayPal…</dd>
+        <dt>Versement (payout)</dt><dd>Le moment où l'argent encaissé arrive sur ton compte bancaire. En France avec Shopify Payments : 3 jours.</dd>
+        <dt>Réserve / fonds retenus</dt><dd>Une partie de l'argent gardée quelque temps par la passerelle de paiement pour couvrir d'éventuels litiges ou remboursements.</dd>
         <dt>Marketplace</dt><dd>Site qui vend les produits de nombreux vendeurs : Amazon, Cdiscount, AliExpress.</dd>
         <dt>Print on demand</dt><dd>Produit imprimé seulement après la commande (t-shirt, mug), sans stock.</dd>
         <dt>Variante / SKU</dt><dd>Une version d'un produit (couleur, taille, lot) et son code unique.</dd>
