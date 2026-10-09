@@ -78,6 +78,7 @@ table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
 th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--trait);vertical-align:top}
 th{font:600 12px/1.2 var(--titre);letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
 tr:last-child td{border-bottom:0}
+.comp td:first-child{white-space:normal}
 td:first-child{font-weight:500;white-space:nowrap}
 .fiche{background:var(--carte);border:1px solid var(--trait);border-radius:10px;padding:22px 24px;display:grid;gap:14px}
 .fiche p{margin:0;max-width:68ch}
@@ -206,7 +207,7 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
     <section id="plateforme">
       <div class="entete"><span class="num">Choix de départ</span><h2>Shopify ou WooCommerce ? Et les paiements</h2><p class="but">Shopify est un service tout-en-un qu'on loue. WooCommerce est une extension gratuite de WordPress qu'on installe et qu'on entretient soi-même. Le bon choix dépend surtout du temps que tu veux passer sur la technique.</p></div>
       <div class="tab">
-        <table style="min-width:600px">
+        <table class="comp" style="min-width:600px">
           <colgroup><col style="width:24%"><col style="width:38%"><col style="width:38%"></colgroup>
           <thead><tr><th>Sujet</th><th>Shopify</th><th>WooCommerce</th></tr></thead>
           <tbody>
@@ -222,7 +223,7 @@ footer.pied{grid-column:1/-1;border-top:1px solid var(--trait);padding-top:20px;
       </div>
       <h3>Les solutions de paiement et leurs versements</h3>
       <div class="tab">
-        <table style="min-width:680px">
+        <table class="comp" style="min-width:680px">
           <colgroup><col style="width:17%"><col style="width:27%"><col style="width:26%"><col style="width:30%"></colgroup>
           <thead><tr><th>Solution</th><th>Frais (ordre de grandeur)</th><th>Versements</th><th>À savoir</th></tr></thead>
           <tbody>
